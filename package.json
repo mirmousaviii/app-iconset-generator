@@ -1,0 +1,29 @@
+{
+  "name": "app-icon-maker",
+  "version": "1.0.0",
+  "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirmousaviii/app-icon-maker.git"
+  },
+  "keywords": [
+    "icon",
+    "app",
+    "react-native",
+    "android",
+    "ios",
+    "cli"
+  ],
+  "author": "Mostafa Mirmousavi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirmousaviii/app-icon-maker/issues"
+  },
+  "homepage": "https://github.com/mirmousaviii/app-icon-maker#readme",
+  "dependencies": {
+  }
+}

@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "app-icon-maker": "./bin/app-icon-maker"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mirmousaviii/app-icon-maker.git"

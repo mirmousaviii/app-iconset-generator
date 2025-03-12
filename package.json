@@ -1,17 +1,17 @@
 {
-  "name": "app-icon-maker",
-  "version": "1.0.0",
+  "name": "app-icon-set-generator",
+  "version": "1.0.2",
   "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
   "main": "src/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "app-icon-maker": "./bin/app-icon-maker"
+    "app-icon-set-generator": "./bin/app-icon-set-generator"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mirmousaviii/app-icon-maker.git"
+    "url": "git+https://github.com/mirmousaviii/app-icon-set-generator.git"
   },
   "keywords": [
     "icon",
@@ -24,9 +24,9 @@
   "author": "Mostafa Mirmousavi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mirmousaviii/app-icon-maker/issues"
+    "url": "https://github.com/mirmousaviii/app-icon-set-generator/issues"
   },
-  "homepage": "https://github.com/mirmousaviii/app-icon-maker#readme",
+  "homepage": "https://github.com/mirmousaviii/app-icon-set-generator#readme",
   "dependencies": {
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
@@ -37,5 +37,12 @@
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.10",
     "typescript": "^5.8.2"
-  }
+  },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
 }

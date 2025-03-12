@@ -1,19 +1,23 @@
 {
-  "name": "@mirmousaviii/icon-generator",
+  "name": "app-iconset-generator",
   "version": "1.1.2",
   "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
   "type": "module",
   "main": "dist/index.js",
-
   "scripts": {
     "build": "tsc",
-    "test": "node dist/index.js --help"
+    "test": "node dist/index.js --help",
+    "preversion": "npm test",
+    "version": "npm run build && git add -A dist",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build",
+    "postpublish": "git push --follow-tags",
+    "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
+    "publish:github": "npm publish --registry=https://npm.pkg.github.com/"
   },
-
   "bin": {
-    "icon-generator": "./bin/icon-generator"
+    "icon-generator": "bin/icon-generator"
   },
-
   "files": [
     "dist",
     "bin",
@@ -21,19 +25,16 @@
     "LICENSE",
     "package.json"
   ],
-
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mirmousaviii/icon-generator.git"
+    "url": "git+https://github.com/mirmousaviii/app-iconset-generator.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-
   "engines": {
     "node": ">=21.7.3"
   },
-
   "keywords": [
     "icon",
     "iconset",
@@ -45,21 +46,17 @@
     "ios",
     "cli"
   ],
-
   "author": "Mostafa Mirmousavi",
   "license": "MIT",
-
   "bugs": {
-    "url": "https://github.com/mirmousaviii/icon-generator/issues"
+    "url": "https://github.com/mirmousaviii/app-iconset-generator/issues"
   },
-  "homepage": "https://github.com/mirmousaviii/icon-generator#readme",
-
+  "homepage": "https://github.com/mirmousaviii/app-iconset-generator#readme",
   "dependencies": {
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
     "sharp": "^0.33.5"
   },
-
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.10",

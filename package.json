@@ -1,15 +1,19 @@
 {
-  "name": "app-icon-set-generator",
-  "version": "1.1.0",
+  "name": "@mirmousaviii/icon-generator",
+  "version": "1.1.2",
   "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
+  "type": "module",
   "main": "dist/index.js",
+
   "scripts": {
     "build": "tsc",
     "test": "node dist/index.js --help"
   },
+
   "bin": {
-    "app-icon-set-generator": "./bin/app-icon-set-generator"
+    "icon-generator": "./bin/icon-generator"
   },
+
   "files": [
     "dist",
     "bin",
@@ -17,34 +21,45 @@
     "LICENSE",
     "package.json"
   ],
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mirmousaviii/app-icon-set-generator.git"
+    "url": "git+https://github.com/mirmousaviii/icon-generator.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
+
+  "engines": {
+    "node": ">=21.7.3"
+  },
+
   "keywords": [
     "icon",
     "iconset",
     "icon-resizer",
+    "icon-generator",
     "app",
     "react-native",
     "android",
     "ios",
     "cli"
   ],
+
   "author": "Mostafa Mirmousavi",
   "license": "MIT",
+
   "bugs": {
-    "url": "https://github.com/mirmousaviii/app-icon-set-generator/issues"
+    "url": "https://github.com/mirmousaviii/icon-generator/issues"
   },
-  "homepage": "https://github.com/mirmousaviii/app-icon-set-generator#readme",
+  "homepage": "https://github.com/mirmousaviii/icon-generator#readme",
+
   "dependencies": {
     "commander": "^13.1.0",
     "fs-extra": "^11.3.0",
     "sharp": "^0.33.5"
   },
+
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.10",

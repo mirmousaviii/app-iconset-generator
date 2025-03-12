@@ -1,12 +1,6 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.generateIcons = generateIcons;
-const sharp_1 = __importDefault(require("sharp"));
-const fs_extra_1 = __importDefault(require("fs-extra"));
-const path_1 = __importDefault(require("path"));
+import sharp from "sharp";
+import fs from "fs-extra";
+import path from "path";
 const androidSizes = [
     { name: "mdpi", size: 48 },
     { name: "hdpi", size: 72 },
@@ -23,25 +17,25 @@ const iosSizes = [
     { name: "Icon-83.5", size: 83.5 },
     { name: "Icon-1024", size: 1024 },
 ];
-async function generateIcons(input, output) {
+export async function generateIcons(input, output) {
     try {
-        await fs_extra_1.default.ensureDir(output);
+        await fs.ensureDir(output);
         // Generate Android icons
         for (const { name, size } of androidSizes) {
-            const dir = path_1.default.join(output, `android/drawable-${name}`);
-            await fs_extra_1.default.ensureDir(dir);
-            const outputPath = path_1.default.join(dir, "ic_launcher.png");
-            await (0, sharp_1.default)(input)
+            const dir = path.join(output, `android/drawable-${name}`);
+            await fs.ensureDir(dir);
+            const outputPath = path.join(dir, "ic_launcher.png");
+            await sharp(input)
                 .resize(Math.round(size), Math.round(size))
                 .toFile(outputPath);
             console.log(`✅ Android Icon: ${outputPath}`);
         }
         // Generate iOS icons
         for (const { name, size } of iosSizes) {
-            const dir = path_1.default.join(output, "ios");
-            await fs_extra_1.default.ensureDir(dir);
-            const outputPath = path_1.default.join(dir, `${name}.png`);
-            await (0, sharp_1.default)(input)
+            const dir = path.join(output, "ios");
+            await fs.ensureDir(dir);
+            const outputPath = path.join(dir, `${name}.png`);
+            await sharp(input)
                 .resize(Math.round(size), Math.round(size))
                 .toFile(outputPath);
             console.log(`✅ iOS Icon: ${outputPath}`);

@@ -1,22 +1,22 @@
-# app-icon-set-generator
+# icon-generator
 
-[![npm version](https://img.shields.io/npm/v/app-icon-set-generator.svg)](https://www.npmjs.com/package/app-icon-set-generator)
+[![npm version](https://img.shields.io/npm/v/icon-generator.svg)](https://www.npmjs.com/package/icon-generator)
 
 A simple CLI tool to generate Android and iOS icons from a single image.
 
 
 ## 🚀 Installation
 ```sh
-npm install -g app-icon-set-generator
+npm install -g icon-generator
 ```
 
 ## 📦 Usage
 ```sh
-app-icon-set-generator -i <path-to-image> -o <output-directory>
+icon-generator -i <path-to-image> -o <output-directory>
 
 # OR
 
-app-icon-set-generator --input <path-to-image> --output <output-directory>
+icon-generator --input <path-to-image> --output <output-directory>
 ```
 
 # Options
@@ -31,24 +31,24 @@ app-icon-set-generator --input <path-to-image> --output <output-directory>
 
 ### Generate icons from an image
 ```sh
-app-icon-set-generator -i ./example/logo.png -o ./example
+icon-generator -i ./example/logo.png -o ./example
 ```
 
 ###  Without `-o`, saves to `icons/`
 ```sh
-app-icon-set-generator -i logo.png
+icon-generator -i logo.png
 ```
 
 ## 🛠 Development
 
 ```sh
-git clone https://github.com/yourusername/app-icon-set-generator.git
-cd app-icon-set-generator
+git clone https://github.com/mirmousaviii/icon-generator.git
+cd icon-generator
 npm install
 npx tsc
 npm link # to use the local CLI tool
-npm unlink -g app-icon-set-generator # to remove the local CLI tool
-app-icon-set-generator -i ./example/logo.png -o ./example
+npm unlink -g icon-generator # to remove the local CLI tool
+icon-generator -i ./example/logo.png -o ./example
 # Or test with `node`
 node dist/index.js -i ./example/logo.png -o ./example # Test in local
 ```

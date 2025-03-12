@@ -2,7 +2,7 @@
 
 import { program } from "commander";
 import { generateIcons } from "./generator.js";
-import packageJson from "../package.json";
+import packageJson from "../package.json" with { type: "json" };
 
 program
     .name(packageJson.name)

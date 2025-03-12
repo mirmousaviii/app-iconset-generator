@@ -2,19 +2,32 @@
   "name": "app-icon-set-generator",
   "version": "1.0.2",
   "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "node dist/index.js --help"
   },
   "bin": {
     "app-icon-set-generator": "./bin/app-icon-set-generator"
   },
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mirmousaviii/app-icon-set-generator.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "icon",
+    "iconset",
+    "icon-resizer",
     "app",
     "react-native",
     "android",
@@ -33,16 +46,8 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@types/commander": "^2.12.0",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^22.13.10",
     "typescript": "^5.8.2"
-  },
-  "files": [
-    "dist",
-    "bin",
-    "README.md",
-    "LICENSE",
-    "package.json"
-  ]
+  }
 }

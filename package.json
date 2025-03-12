@@ -10,10 +10,8 @@
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags",
-    "prepublish": "npm run build",
-    "postpublish": "git push --follow-tags",
     "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
-    "publish:github": "npm publish --registry=https://npm.pkg.github.com/"
+    "publish:github": "npm pkg set name=@mirmousaviii/app-iconset-generator && npm publish --registry=https://npm.pkg.github.com/ && npm pkg set name=app-iconset-generator || npm pkg set name=app-iconset-generator"
   },
   "bin": {
     "icon-generator": "bin/icon-generator"
@@ -25,12 +23,12 @@
     "LICENSE",
     "package.json"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mirmousaviii/app-iconset-generator.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "engines": {
     "node": ">=21.7.3"

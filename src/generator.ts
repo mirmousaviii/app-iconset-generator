@@ -20,7 +20,7 @@ const iosSizes = [
     { name: "Icon-1024", size: 1024 },
 ];
 
-export async function generateIcons(input: string, output: string) {
+export async function generateIcons(input: string, output: string, round: boolean = true) {
     try {
         await fs.ensureDir(output);
 

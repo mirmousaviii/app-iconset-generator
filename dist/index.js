@@ -8,9 +8,10 @@ program
     .description(packageJson.description)
     .requiredOption("-i, --input <file>", "Input image file (required)")
     .option("-o, --output <folder>", "Output directory", "icons")
+    .option("-n, --no-round", "Disable generating round Android icons")
     .action(async (options) => {
     try {
-        await generateIcons(options.input, options.output);
+        await generateIcons(options.input, options.output, options.round);
     }
     catch (error) {
         if (error instanceof Error) {

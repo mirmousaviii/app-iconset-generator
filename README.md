@@ -25,6 +25,7 @@ app-iconset-generator --input <path-to-image> --output <output-directory>
 |-----------------|----------------------------------|
 | `-i, --input`  | Input image file (required)     |
 | `-o, --output` | Output directory (default: `icons`) |
+| `-n, --no-round` | Disable generating round Android icons |
 
 
 ## 📌 Example

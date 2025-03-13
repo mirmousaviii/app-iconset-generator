@@ -17,7 +17,7 @@ const iosSizes = [
     { name: "Icon-83.5", size: 83.5 },
     { name: "Icon-1024", size: 1024 },
 ];
-export async function generateIcons(input, output) {
+export async function generateIcons(input, output, round = true) {
     try {
         await fs.ensureDir(output);
         // Generate Android icons

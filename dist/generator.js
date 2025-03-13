@@ -24,11 +24,17 @@ export async function generateIcons(input, output) {
         for (const { name, size } of androidSizes) {
             const dir = path.join(output, `android/drawable-${name}`);
             await fs.ensureDir(dir);
+            //  Generate the normal icon
             const outputPath = path.join(dir, "ic_launcher.png");
-            await sharp(input)
-                .resize(Math.round(size), Math.round(size))
-                .toFile(outputPath);
+            await sharp(input).resize(size, size).toFile(outputPath);
             console.log(`✅ Android Icon: ${outputPath}`);
+            //  Generate the round icon
+            const roundOutputPath = path.join(dir, "ic_launcher_round.png");
+            await sharp(input)
+                .resize(size, size)
+                .composite([{ input: Buffer.from(`<svg><circle cx="${size / 2}" cy="${size / 2}" r="${size / 2}" fill="white"/></svg>`), blend: "dest-in" }])
+                .toFile(roundOutputPath);
+            console.log(`✅ Android Round Icon: ${roundOutputPath}`);
         }
         // Generate iOS icons
         for (const { name, size } of iosSizes) {

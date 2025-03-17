@@ -14,7 +14,7 @@
     "publish:github": "npm pkg set name=@mirmousaviii/app-iconset-generator && npm publish --registry=https://npm.pkg.github.com/ && npm pkg set name=app-iconset-generator || npm pkg set name=app-iconset-generator"
   },
   "bin": {
-    "icon-generator": "bin/icon-generator"
+    "app-iconset-generator": "bin/app-iconset-generator"
   },
   "files": [
     "dist",

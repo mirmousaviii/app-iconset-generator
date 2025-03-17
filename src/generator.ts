@@ -62,7 +62,7 @@ export async function generateIcons(input: string, output: string, round: boolea
 
             console.log("🎉 All icons generated successfully!");
         }
-        
+
     } catch (error) {
         console.error("❌ Error generating icons:", error);
     }

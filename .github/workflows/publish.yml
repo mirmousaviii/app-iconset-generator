@@ -3,7 +3,11 @@ name: Publish Package
 on:
   push:
     tags:
-      - "v*" 
+      - "v*"
+
+permissions:
+  contents: read
+  packages: write 
 
 jobs:
   publish:

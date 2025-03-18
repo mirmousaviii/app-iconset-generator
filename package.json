@@ -1,6 +1,6 @@
 {
   "name": "app-iconset-generator",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "A simple CLI tool to generate Android and iOS icons from a single image.",
   "type": "module",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
     "postversion": "git push && git push --tags"
-   },
+  },
   "bin": {
     "app-iconset-generator": "bin/app-iconset-generator"
   },

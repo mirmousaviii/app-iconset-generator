@@ -9,10 +9,8 @@
     "test": "node dist/index.js --help",
     "preversion": "npm test",
     "version": "npm run build && git add -A dist",
-    "postversion": "git push && git push --tags",
-    "publish:npm": "npm publish --registry=https://registry.npmjs.org/",
-    "publish:github": "npm pkg set name=@mirmousaviii/app-iconset-generator && npm publish --registry=https://npm.pkg.github.com/ && npm pkg set name=app-iconset-generator || npm pkg set name=app-iconset-generator"
-  },
+    "postversion": "git push && git push --tags"
+   },
   "bin": {
     "app-iconset-generator": "bin/app-iconset-generator"
   },

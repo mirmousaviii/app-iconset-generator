@@ -1,6 +1,7 @@
 # app-iconset-generator
 
 [![npm version](https://img.shields.io/npm/v/app-iconset-generator.svg)](https://www.npmjs.com/package/app-iconset-generator)
+[![Publish Package](https://github.com/mirmousaviii/app-iconset-generator/actions/workflows/publish.yml/badge.svg)](https://github.com/mirmousaviii/app-iconset-generator/actions/workflows/publish.yml)
 
 A simple CLI tool to generate Android and iOS icons from a single image.
 

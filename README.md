@@ -25,6 +25,7 @@ app-iconset-generator --input <path-to-image> --output <output-directory>
 |-----------------|----------------------------------|
 | `-i, --input`  | Input image file (required)     |
 | `-o, --output` | Output directory (default: `icons`) |
+|`-p, --platform`|Specify platform to generate icons for (`android`, `ios`, `all`) (default: `all`)|
 | `-n, --no-round` | Disable generating round Android icons |
 
 
@@ -35,9 +36,14 @@ app-iconset-generator --input <path-to-image> --output <output-directory>
 app-iconset-generator -i ./example/logo.png -o ./example
 ```
 
-###  Without `-o`, saves to `icons/`
+### Specify platform
 ```sh
-app-iconset-generator -i logo.png
+app-iconset-generator -i ./example/logo.png -o ./example -p android
+```
+
+###  Save to `icons/` 
+```sh
+app-iconset-generator -i logo.png # Default path
 ```
 
 ## 🛠 Development
@@ -46,10 +52,13 @@ app-iconset-generator -i logo.png
 git clone https://github.com/mirmousaviii/app-iconset-generator.git
 cd app-iconset-generator
 npm install
-npx tsc
+npm run build # or `npx tsc`
+
 npm link # to use the local CLI tool
 npm unlink -g app-iconset-generator # to remove the local CLI tool
+
 app-iconset-generator -i ./example/logo.png -o ./example
+
 # Or test with `node`
 node dist/index.js -i ./example/logo.png -o ./example # Test in local
 ```
